@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Pusat Perjalanan Wisata Bangka Belitung</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="assets/css/metro.min.css" rel="stylesheet">
+        <link href="assets/css/onepage-scroll.css" rel="stylesheet">
+        <link href="assets/css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="app-bar">
+        <a class="app-bar-element" href="...">Wisata Bangka</a>
+        <span class="app-bar-divider"></span>
+        <ul class="app-bar-menu">
+            <li><a href="">Home</a></li>
+            <li>
+                <a href="" class="dropdown-toggle">Products</a>
+                <ul class="d-menu" data-role="dropdown">
+                    <li><a href="">Paket 1</a></li>
+                    <li><a href="">Paket 2</a></li>
+                </ul>
+            </li>
+            <li><a href="">Help</a></li>
+        </ul>
+        </div>
+
+        <div id="main">
+        <section class="page-one">
+            <div class="container">
+            <div class="grid">    
+                <div class="row cells1">
+                    <div class="cell">
+                        <div class="carousel auto stop" id="carousel" data-controls="false" data-markers="false" data-effect="fade" data-height="260">
+                            <div class="slide"><img src="assets/img/babel1.jpg" alt=""></div>
+                            <div class="slide"><img src="assets/img/babel2.jpg" alt=""></div>
+                            <div class="slide"><img src="assets/img/babel3.jpg" alt=""></div>
+                            <div class="slide"><img src="assets/img/babel4.jpg" alt=""></div>
+                        </div><hr>
+
+                        <h4>Wisata Bangka Belitung:</h4>
+                        <p class="info">
+                            Kami adalah perusahaan yang bergerak dibidang jasa travel bangka belitung dan Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                            Doloribus atque id cupiditate, reiciendis obcaecati nostrum aliquid tempora accusantium ut dolorem officiis assumenda error. 
+                            Aliquam doloremque deserunt error quis earum ipsam. Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                            Quibusdam animi similique alias qui praesentium deserunt dolorum nam repellat nostrum mollitia architecto eveniet quod iure ratione, magni doloremque inventore est at.
+                        </p><hr>
+                        <h4>Promo terbatas:</h4>
+                        <h5>Dapatkan potongan <b>100%</b> untuk semua jenis paket travel kami!</h5>
+                        <div class="countdown" id="countdown" data-days="7"></div>
+                        <button id="bawah" class="button">Dapatkan penawarannya sekarang</button>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <section class="page-two">
+            <div class="container">
+            <div class="grid">  
+                <div class="row cells1">
+                    <div class="cell">
+                    <form>
+                        <h3>Silahkan isi form berikut untuk mendapatkan promo dari kami:</h3>
+                        <div class="input-control text">
+                            <input type="text" placeholder="Nama Lengkap" required>
+                        </div><br>
+                        <div class="input-control text">
+                            <input type="email" placeholder="Email" required>
+                        </div><br>
+                        <div class="input-control textarea" data-role="input" data-text-auto-resize="true">
+                            <textarea cols="60" placeholder="Pendapat anda terhadap layanan kami"></textarea>
+                        </div><br>
+                        <label class="input-control checkbox">
+                            <input type="checkbox" required>
+                            <span class="check"></span>
+                            <span class="caption">Saya menerima syarat & ketentuan yang berlaku</span>
+                        </label><br>
+                        <input type="reset" value="Reset">
+                        <input class="button" type="submit" value="Submit">
+                    </form>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        </div>
+    
+        <script src="assets/js/jquery-3.2.0.min.js"></script>
+        <script src="assets/js/jquery.onepage-scroll.js"></script>                    
+        <script src="assets/js/metro.min.js"></script>    
+        <script>
+            $(function(){
+                $("#carousel").carousel();
+            });
+
+            $(function(){
+                $("#countdown").countdown();
+            });
+
+            $("#main").onepage_scroll({
+                sectionContainer: "section",
+                easing: "cubic-bezier(0.180, 0.900, 0.410, 1.210)"
+            });
+
+            $("#bawah").click(function() {
+                $("#main").moveDown();
+            });
+        </script>    
+    </body>
+</html>
